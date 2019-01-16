@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './App.css';
 
 class App extends Component {
@@ -9,13 +9,12 @@ class App extends Component {
   getItems() {
     fetch('http://127.0.0.1:8000/api/item/')
       .then(res => res.json())
-      .then(({res}) => console.log(res))
+      .then(res => console.log(res))
   }
 
   render() {
     return null;
   }
 }
-
 
 export default App;
