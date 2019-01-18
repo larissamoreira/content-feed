@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import ContentItem from './ContentItem.js'
 
 class App extends Component {
   constructor() {
@@ -23,10 +23,7 @@ class App extends Component {
       <ul>
         {this.state.items.map(function (item, index) {
           return (
-            <div key={index}>
-              <h1>{item.title}</h1>
-              <p>{item.description}</p>
-            </div>
+            <ContentItem item={item} />
           )
         })}
       </ul>
