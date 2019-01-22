@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ContentItem from './ContentItem.js'
+import ContentItem from './ContentItem.js';
+import { Container, Row, Col } from 'reactstrap';
 
 class App extends Component {
   constructor() {
@@ -20,13 +21,19 @@ class App extends Component {
 
   render() {
     return (
-      <ul>
+      <Container>
+        <h1>Content Feed</h1>
         {this.state.items.map(function (item, index) {
           return (
-            <ContentItem item={item} />
+            <Row className="ContentItem">
+              <Col xs={3}></Col>
+              <Col xs={6}>
+                <ContentItem item={item} />
+              </Col>
+            </Row>
           )
         })}
-      </ul>
+      </Container>
     )
   }
 }
