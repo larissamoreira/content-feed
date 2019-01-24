@@ -26,8 +26,8 @@ class App extends Component {
         {this.state.items.map(function (item, index) {
           return (
             <Row className="ContentItem">
-              <Col xs={3}></Col>
-              <Col xs={6}>
+              <Col xs={3} />
+              <Col xs={12} sm={6}>
                 <ContentItem item={item} />
               </Col>
             </Row>
